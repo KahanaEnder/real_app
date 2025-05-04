@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_app/view/components/my_cards.dart';
+import 'package:real_app/view/components/my_list_tile.dart';
 
 class MyBody extends StatelessWidget {
   const MyBody({
@@ -9,7 +10,7 @@ class MyBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      bottom: false,
+      bottom: true,
       child: Column(
         children: [
           Container(
@@ -23,7 +24,8 @@ class MyBody extends StatelessWidget {
                             style: Theme.of(context).textTheme.bodyLarge,
                             textAlign: TextAlign.center,
                             ),
-                Text("Poncho Ponchopes Ponchopeso\nPonchopesin Ponchopino Pirinpipino\nPreciosín Precioso Chiquitilin Chiquitilino",
+                Text(
+                  "Poncho Ponchopes Ponchopeso\nPonchopesin Ponchopino Pirinpipino\nPreciosín Precioso Chiquitilin Chiquitilino",
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 22,backgroundColor: Color.fromARGB(120, 255, 255, 255),shadows: List.filled(3, Shadow(color: Colors.black),growable: false)),
                     overflow: TextOverflow.ellipsis,
                     strutStyle: StrutStyle(height: 3),
@@ -47,14 +49,34 @@ class MyBody extends StatelessWidget {
                                         ),
               child: Column(
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      MyCards(texto: "CARTA1"),
-                      MyCards(texto: "CARTA2",),
-                      MyCards(texto: "CARTA3",),
+                      MyCards(texto: "FAVORITOS",icono: Icons.catching_pokemon,),
+                      MyCards(texto: "NUEVOS",icono:Icons.catching_pokemon_sharp),
+                      MyCards(texto: "OPCIONES",icono: Icons.settings),
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        MyListTile(titulo: "Ponchopun",subtitulo: "Es un gato perezoson"),
+                        MyListTile(titulo: "Ponchapuna",subtitulo: "Es una gata traviesa",),
+                        MyListTile(titulo: "La pspspsps", subtitulo: "Es una gata loca",),
+                        MyListTile(titulo: "Ponchopezuño",subtitulo: "Es un gato perezoson"),
+                        MyListTile(titulo: "Ponchopezuña",subtitulo: "Es una gata perezosona"),
+                        MyListTile(titulo: "",subtitulo: "",),
+                        MyListTile(titulo: "",subtitulo: "",),
+                        MyListTile(titulo: "",subtitulo: "",),
+                        MyListTile(titulo: "",subtitulo: "",),
+                        MyListTile(titulo: "",subtitulo: "",),
+                        MyListTile(titulo: "",subtitulo: "",),
+                      ],
+                    ),
+                  )
                 ],
               ),
             
