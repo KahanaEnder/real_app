@@ -32,7 +32,7 @@ class MyMaterials extends StatelessWidget {
             ),
         iconTheme: IconThemeData(
           size: 23,
-          color: Colors.purple,
+          color: Colors.teal[900],
           weight: 200,
           opacity: 1,
           opticalSize: 36,
@@ -42,7 +42,7 @@ class MyMaterials extends StatelessWidget {
         
         tooltipTheme: TooltipThemeData(
           decoration: BoxDecoration(border: Border.all(),
-                                    color: Colors.amber,
+                                    color: Colors.deepOrange,
                                     borderRadius: BorderRadius.circular(20),
                                     shape: BoxShape.rectangle,
                                     
@@ -55,7 +55,7 @@ class MyMaterials extends StatelessWidget {
         
         buttonTheme: ButtonThemeData(
           colorScheme: Theme.of(context).colorScheme,
-          hoverColor: Colors.amber,
+          hoverColor: Colors.deepPurple,
           shape: StadiumBorder(),
     
         ),

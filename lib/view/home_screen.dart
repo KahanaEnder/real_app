@@ -19,12 +19,15 @@ class HomeScreen extends StatelessWidget {
           size: Theme.of(context).iconTheme.size,),
 
         title: Text(
-          "PonchoApp",
-          style: Theme.of(context).textTheme.titleLarge,
+          "PonchoNames",
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(letterSpacing: 4,fontWeight: FontWeight.w900,),
           textAlign: TextAlign.end,),
         
       ),
       body: MyBody(),
+
+
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         tooltip: "Añadir",
