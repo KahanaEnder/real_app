@@ -38,7 +38,7 @@ class MyBody extends StatelessWidget {
             child: Container(
       
               width: double.infinity,
-              margin: EdgeInsets.symmetric(),
+              margin: const EdgeInsets.symmetric(),
               padding: EdgeInsets.all(8.0),
               
               decoration: BoxDecoration(
@@ -63,17 +63,17 @@ class MyBody extends StatelessWidget {
                   Expanded(
                     child: ListView(
                       children: [
-                        MyListTile(titulo: "Ponchopun",subtitulo: "Es un gato perezoson"),
-                        MyListTile(titulo: "Ponchapuna",subtitulo: "Es una gata traviesa",),
-                        MyListTile(titulo: "La pspspsps", subtitulo: "Es una gata loca",),
-                        MyListTile(titulo: "Ponchopezuño",subtitulo: "Es un gato perezoson"),
-                        MyListTile(titulo: "Ponchopezuña",subtitulo: "Es una gata perezosona"),
-                        MyListTile(titulo: "",subtitulo: "",),
-                        MyListTile(titulo: "",subtitulo: "",),
-                        MyListTile(titulo: "",subtitulo: "",),
-                        MyListTile(titulo: "",subtitulo: "",),
-                        MyListTile(titulo: "",subtitulo: "",),
-                        MyListTile(titulo: "",subtitulo: "",),
+                        const MyListTile(titulo: "Ponchopun",subtitulo: "Es un gato perezoson"),
+                        const MyListTile(titulo: "Ponchapuna",subtitulo: "Es una gata traviesa",),
+                        const MyListTile(titulo: "La pspspsps", subtitulo: "Es una gata loca",),
+                        const MyListTile(titulo: "Ponchopezuño",subtitulo: "Es un gato perezoson"),
+                        const MyListTile(titulo: "Ponchopezuña",subtitulo: "Es una gata perezosona"),
+                        const MyListTile(titulo: "Momoso",subtitulo: "Es un gato momosin",),
+                        const MyListTile(titulo: "Momosho",subtitulo: "Es un gato momosho",),
+                        const MyListTile(titulo: "Pechocho",subtitulo: "Es un gato pechochín",),
+                        const MyListTile(titulo: "",subtitulo: "",),
+                        const MyListTile(titulo: "",subtitulo: "",),
+                        const MyListTile(titulo: "",subtitulo: "",),
                       ],
                     ),
                   )
