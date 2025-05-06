@@ -41,13 +41,26 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: false,
             context: context,
             builder: (context) {
               return Column(
+                //crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   SizedBox(
-                    height: 50,
-                    width: 800,
+                    height: 10,
+                    width: double.infinity,
+                  ),
+                  Container(
+                    height: 10,
+                    width: 50,
+                    decoration: BoxDecoration(color: Colors.grey,borderRadius: BorderRadius.circular(5)),
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(20),
+                  ),
+                  SizedBox(
+                    height: 10,
+                    width: double.infinity,
                   ),
                   CupertinoSlidingSegmentedControl(
                   groupValue: typeIndex,
@@ -59,7 +72,25 @@ class _HomeScreenState extends State<HomeScreen> {
                     setState(() {
                       typeIndex = value;
                     });
-                  })
+                  }),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  TextField(
+                    autofocus: true,
+                    textAlign: TextAlign.center,
+                    cursorColor: Colors.amber,
+                    decoration: InputDecoration.collapsed(hintText: "Ingresa tu ponchopes"),
+                    keyboardAppearance: Brightness.dark,
+                    keyboardType: TextInputType.name,
+                  ),
+                  SizedBox(
+                    height: 40,
+                    width: double.infinity,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Guardar"))
                 ],
               );
             }
