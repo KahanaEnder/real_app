@@ -34,13 +34,10 @@ class MyBody extends StatelessWidget {
             ),
             ),
           Expanded(
-      
             child: Container(
-      
               width: double.infinity,
               margin: const EdgeInsets.symmetric(),
               padding: EdgeInsets.all(8.0),
-              
               decoration: BoxDecoration(
                                         border: Border.all(),
                                         color: Colors.teal[800],
@@ -85,13 +82,5 @@ class MyBody extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
